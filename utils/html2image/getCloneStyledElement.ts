@@ -23,10 +23,10 @@ const applyStyles = async (sourceElement: HTMLElement, clonedElement: HTMLElemen
     }
   }
 
-  const sourceStyles = window.getComputedStyle(sourceElement);
-  for (const item of sourceStyles) {
-    clonedElement.style.setProperty(item, sourceStyles.getPropertyValue(item), sourceStyles.getPropertyPriority(item));
-  }
+  // const sourceStyles = window.getComputedStyle(sourceElement);
+  // for (const item of sourceStyles) {
+  //   clonedElement.style.setProperty(item, sourceStyles.getPropertyValue(item), sourceStyles.getPropertyPriority(item));
+  // }
 
   for (let i = 0; i < clonedElement.childElementCount; i++) {
     await applyStyles(sourceElement.children[i] as HTMLElement, clonedElement.children[i] as HTMLElement);
