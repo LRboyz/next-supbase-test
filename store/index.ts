@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import globalReducer from "./reducer/global";
-import userReducer from "./reducer/user";
+// import userReducer from "./reducer/user";
 import memoReducer from "./reducer/memo";
 import articleReducer from "./reducer/article";
 import shortcutReducer from "./reducer/shortcut";
@@ -14,7 +14,7 @@ import layoutReducer from "./reducer/layout";
 const store = configureStore({
   reducer: {
     global: globalReducer,
-    user: userReducer,
+    // user: userReducer,
     memo: memoReducer,
     article: articleReducer,
     // tag: tagReducer,
